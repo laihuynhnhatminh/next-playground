@@ -6,9 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint && biome ci --assist-enabled=true .",
+    "lint": "biome ci --assist-enabled=true .",
     "lint-staged": "lint-staged",
-    "lint:fix": "next lint --fix && biome check --write --unsafe --verbose  .",
+    "lint:fix": "biome check --write --unsafe --verbose  .",
     "prepare": "husky"
   },
   "dependencies": {

@@ -130,7 +130,7 @@ export const Mathematics = Node.create<MathematicsOptions>({
   },
 
   renderHTML({ node, HTMLAttributes }) {
-    const latex = node.attrs['latex'] ?? '';
+    const latex = node.attrs.latex ?? '';
     return [
       'span',
       mergeAttributes(HTMLAttributes, {
@@ -141,13 +141,13 @@ export const Mathematics = Node.create<MathematicsOptions>({
   },
 
   renderText({ node }) {
-    return node.attrs['latex'] ?? '';
+    return node.attrs.latex ?? '';
   },
 
   addNodeView() {
     return ({ node, HTMLAttributes, getPos, editor }) => {
       const dom = document.createElement('span');
-      const latex: string = node.attrs['latex'] ?? '';
+      const latex: string = node.attrs.latex ?? '';
 
       Object.entries(this.options.HTMLAttributes).forEach(([key, value]) => {
         dom.setAttribute(key, value);
