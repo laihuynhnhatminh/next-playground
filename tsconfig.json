@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext", "webworker"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,9 +19,32 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/messages/*": ["./messages/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/constants/*": ["./src/constants/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/libs/*": ["./src/libs/*"],
+      "@/i18n/*": ["./src/i18n/*"],
+      "@/stores/*": ["./src/stores/*"],
+      "@/enums/*": ["./src/enums/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/configs/*": ["./src/configs/*"],
+      "@/api/*": ["./src/api/*"],
+      "@/app/*": ["./src/app/*"],
+      "@/schemas/*": ["./src/schemas/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "eslint.config.mjs",
+    "next.config.ts",
+    "commitlint.config.ts",
+    "postcss.config.mjs"
+  ],
   "exclude": ["node_modules"]
 }
